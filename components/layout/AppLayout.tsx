@@ -13,5 +13,8 @@ const AppLayout: React.FC<AppProps> = ({ children }) => {
     </>
   );
 };
-const Contents = styled.div``;
+const Contents = styled.div`
+  padding: 100px 16px;
+  min-height: 100vh;
+`;
 export default AppLayout;

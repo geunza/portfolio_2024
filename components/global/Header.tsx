@@ -1,6 +1,7 @@
-import React from "react";
+import Link from "next/link";
+import React, { useCallback } from "react";
 import styled from "styled-components";
-
+const HeaderList = ["about", "skill", "career", "work"];
 const Header: React.FC<{}> = ({}) => {
   return (
     <HeaderWrap>
@@ -12,18 +13,11 @@ const Header: React.FC<{}> = ({}) => {
         </h1>
         <nav>
           <ul className="gnb">
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#skill">SKILLS</a>
-            </li>
-            <li>
-              <a href="#career">CARRER</a>
-            </li>
-            <li>
-              <a href="#work">WORKS</a>
-            </li>
+            {HeaderList.map((item) => (
+              <li key={item}>
+                <Link href={`/${item}`}>{item.toUpperCase()}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

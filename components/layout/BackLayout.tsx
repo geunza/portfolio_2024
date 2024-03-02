@@ -51,9 +51,6 @@ const BackLayout: React.FC<{}> = ({}) => {
       window.removeEventListener("mousemove", getMousePos);
     };
   }, [getMousePos]);
-  useEffect(() => {
-    console.log(pos);
-  }, [pos]);
   return (
     <Background
       style={{
